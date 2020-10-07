@@ -23,7 +23,10 @@
             <td>@student.StudentId</td>
             <td>@student.StudentName</td>
             <td>@student.Age</td>
-            <td>@Html.ActionLink("View", "View", "Student", new { id = student.StudentId }, null)</td>
+            <td>
+                @Html.ActionLink("View", "View", "Student", new { id = student.StudentId }, null) | 
+                @Html.ActionLink("Edit", "Edit", "Student", new { id = student.StudentId }, null)
+            </td>
         </tr>
     }
 </table>

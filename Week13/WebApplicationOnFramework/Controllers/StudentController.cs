@@ -52,5 +52,13 @@ namespace WebApplicationOnFramework.Controllers
 
             return View(student);
         }
+
+        [HttpGet]
+        public ActionResult Edit(int id)
+        {
+            var student = manager.GetById(id);
+
+            return View(student);
+        }
     }
 }
