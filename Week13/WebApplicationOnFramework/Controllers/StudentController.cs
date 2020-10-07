@@ -60,5 +60,27 @@ namespace WebApplicationOnFramework.Controllers
 
             return View(student);
         }
+
+        [HttpPost]
+        public ActionResult EditStudent(Student student)
+        {
+            return RedirectToAction("Index");
+        }
+
+        [HttpPost]
+        public ActionResult Edit(int id, Student student)
+        {
+            var existingStudent = manager.GetById(id);
+
+            if (ModelState.IsValid)
+            {
+                existingStudent.StudentName = student.StudentName;
+                existingStudent.Age = student.Age;
+
+                return RedirectToAction("Index");
+            }
+
+            return View(existingStudent);
+        }
     }
 }

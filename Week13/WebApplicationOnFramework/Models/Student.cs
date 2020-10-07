@@ -12,7 +12,6 @@ namespace WebApplicationOnFramework.Models
         public int StudentId { get; set; }
 
         [Required] 
-        [EmailAddress] 
         public string StudentName { get; set; }
 
         [Range(10, 20)]
