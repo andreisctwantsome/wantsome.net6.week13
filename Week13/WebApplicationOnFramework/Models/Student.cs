@@ -6,12 +6,13 @@ using System.Web;
 
 namespace WebApplicationOnFramework.Models
 {
+    // 
     public class Student
     {
         public int StudentId { get; set; }
 
-        [Required]
-        [EmailAddress]
+        [Required] 
+        [EmailAddress] 
         public string StudentName { get; set; }
 
         [Range(10, 20)]
@@ -47,7 +48,7 @@ namespace WebApplicationOnFramework.Models
             studentList.Add(student);
         }
 
-        private int GetMaxId() 
+        private int GetMaxId()
         {
             return studentList.Count + 1;
         }
